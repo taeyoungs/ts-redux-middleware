@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './githubUsernameForm.css';
+import './GithubUsernameForm.css';
 
 interface IGithubUsernameFormProps {
   onSubmitUsername: (username: string) => void;
