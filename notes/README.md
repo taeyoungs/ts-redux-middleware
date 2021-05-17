@@ -11,15 +11,8 @@
 3. Thunk 함수 작성
 4. createReducer 유틸 함수를 이용한 reducer 작성
 
-- 비동기 작업을 위한 Thunk 함수에는 총 3가지의 액션이 필요
-
-1. 요청 중이라는 로딩 상태를 알리는 액션
-2. 요청이 성공했을 때의 액션
-3. 요청이 실패했을 때의 액션
-
 ## tips
 
-- API의 결과물을 위한 타입을 미리 정의해두면 유용하게 사용할 수 있다.
 - axios method 뒤에 Generic을 설정해주면 response data의 타입을 설정할 수 있다.
 
 ```ts
@@ -28,7 +21,7 @@ const response = await axios.get<GithubProfile>(
 );
 ```
 
-- typesafe-actions에는 비동기 작업에 관한 액션들을 선언할 때 이를 쉽게 작성할 수 있도록 도와주는 유틸 함수가 존재한다. createAction으로 각 액션마다 액션 생성 함수를 작성할 수도 있지만 createAsyncAction으로 request, success, failure, cancel 함수를 한꺼번에 작성할 수도 있다.
+- typesafe-actions에는 비동기 작업에 관한 액션들을 선언할 때 이를 쉽게 작성할 수 있도록 도와주는 유틸 함수가 존재한다.
 
 ```ts
 import { AxiosError } from 'axios';
@@ -58,3 +51,17 @@ export const getUserProfileAsync = createAsyncAction(
 - redux-thunk
 - axios
 - typesafe-actions
+
+# 11 presentional component
+
+## log
+
+- 이름을 통해 Github 사용자 정보를 조회하는 GithubUsernameForm과 API 요청을 통해 받아온 사용자 정보를 바탕으로 렌더링하는 GithubProfileInfo 컴포넌트 작성
+
+## tips
+
+## issue
+
+- none
+
+## dependency
