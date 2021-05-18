@@ -1,7 +1,8 @@
-import { Dispatch } from 'redux';
 import { getUserProfile } from '../../api/github';
+import createAsyncThunk from '../../lib/createAsyncThunk';
 import { getUserProfileAsync } from './actions';
 
+/*
 export function getUserProfileThunk(username: string) {
   return async (dispatch: Dispatch) => {
     const { failure, request, success } = getUserProfileAsync;
@@ -19,3 +20,11 @@ export function getUserProfileThunk(username: string) {
     }
   };
 }
+*/
+
+// 첫 번째 파라미터로는 Action을 생성하는 함수
+// 두 번째 파라미터로는 API 요청 함수
+export const getUserProfileThunk = createAsyncThunk(
+  getUserProfileAsync,
+  getUserProfile
+);
