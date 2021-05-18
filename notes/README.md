@@ -66,7 +66,7 @@ export const getUserProfileAsync = createAsyncAction(
 
 ## dependency
 
-# 11 presentional component
+# 12 container component
 
 ## log
 
